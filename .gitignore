@@ -118,5 +118,3 @@ mmseg/.mim
 work_dirs*/
 # Pytorch
 *.pth
-tools/train.sh
-tools/*.sh
