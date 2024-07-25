@@ -44,3 +44,9 @@ bash tools/train.sh
 
 
 ## Reference  
+@inproceedings{Dong2024EfficientCDAN,
+  title={EfficientCD: A New Strategy For Change Detection Based With Bi-temporal Layers Exchanged},
+  author={Sijun Dong and Yuwei Zhu and Geng Chen and Xiaoliang Meng},
+  year={2024},
+  url={https://api.semanticscholar.org/CorpusID:271334086}
+}
