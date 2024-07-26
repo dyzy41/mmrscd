@@ -33,9 +33,16 @@ bash tools/train.sh
  If you use this code for your research, please cite our papers.  
 
 ```
-
-
-
+@ARTICLE{10608163,
+  author={Dong, Sijun and Zhu, Yuwei and Chen, Geng and Meng, Xiaoliang},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={EfficientCD: A New Strategy For Change Detection Based With Bi-temporal Layers Exchanged}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Feature extraction;Remote sensing;Task analysis;Computational modeling;Transformers;Biological system modeling;Land surface;Change detection;feature interaction;Euclidean distance},
+  doi={10.1109/TGRS.2024.3433014}}
 ```
 ## Acknowledgments
 
@@ -44,9 +51,4 @@ bash tools/train.sh
 
 
 ## Reference  
-@inproceedings{Dong2024EfficientCDAN,
-  title={EfficientCD: A New Strategy For Change Detection Based With Bi-temporal Layers Exchanged},
-  author={Sijun Dong and Yuwei Zhu and Geng Chen and Xiaoliang Meng},
-  year={2024},
-  url={https://api.semanticscholar.org/CorpusID:271334086}
-}
+
