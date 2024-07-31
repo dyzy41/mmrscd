@@ -26,7 +26,8 @@ from mmseg.models.backbones.resnet import BasicBlock
 class CDNet(nn.Module):
     def __init__(self, neck, model_name='efficientnet_b5'):
         super(CDNet, self).__init__()
-        self.model = timm.create_model(model_name, pretrained=True)
+        self.model = timm.create_model('efficientnet_b5', pretrained=True, features_only=True)
+        # self.model = timm.create_model('efficientnet_b5', pretrained=True, pretrained_cfg_overlay=dict(file='/home/jicredt1/pretrained/efficientnet_b5/pytorch_model.bin'), features_only=True)
         self.interaction_layers = ['blocks']
         # self.up_layer = [5, 3, 2, 1, 0]
         FPN_DICT = neck

@@ -7,8 +7,8 @@ work_dirs=$4
 model_checkpoint=$(find "$work_dirs" -name 'best_mIoU_iter_*.pth' -type f -print -quit)
 echo $model_checkpoint
 if [ "$data_name" == "WHUCD" ]; then
-    label_dir="$CDPATH/WHUCD/cut_data/label"
-    bash tools/dist_test.sh "$config_file" "$model_checkpoint" $num_gpu --out "$work_dirs/test_result" --cfg-options test_dataloader.dataset.data_root="$CDPATH/WHUCD/cut_data"
+    label_dir="$CDPATH/WHUCD/label"
+    bash tools/dist_test.sh "$config_file" "$model_checkpoint" $num_gpu --out "$work_dirs/test_result" --cfg-options test_dataloader.dataset.data_root="$CDPATH/WHUCD"
     python tools/general/metric.py --pppred "$work_dirs/test_result" --gggt "$label_dir"
 elif [ "$data_name" == "HRCUS" ]; then
     label_dir="$CDPATH/HRCUS-CD/test/label"
@@ -39,6 +39,12 @@ elif [ "$data_name" == "GZCD" ]; then
     bash tools/dist_test.sh "$config_file" "$model_checkpoint" $num_gpu --out "$work_dirs/test_result"
     python tools/general/metric.py --pppred "$work_dirs/test_result" --gggt "$label_dir"
 elif [ "$data_name" == "LEVIR" ]; then
+    bigimg_dir="$CDPATH/LEVIR-CD/test/A"
+    label_dir="$CDPATH/LEVIR-CD/test/label"
+    bash tools/dist_test.sh "$config_file" "$model_checkpoint" $num_gpu --out "$work_dirs/test_result" --cfg-options test_dataloader.dataset.data_root="$CDPATH/LEVIR-CD"
+    # python tools/general/merge_data.py --p_predslice "$work_dirs/test_result" --p_bigimg "$bigimg_dir"
+    python tools/general/metric.py --pppred "$work_dirs/test_result" --gggt "$label_dir"
+elif [ "$data_name" == "LEVIR_CUT" ]; then
     bigimg_dir="$CDPATH/LEVIR-CD/test/A"
     label_dir="$CDPATH/LEVIR-CD/test/label"
     bash tools/dist_test.sh "$config_file" "$model_checkpoint" $num_gpu --out "$work_dirs/test_result" --cfg-options test_dataloader.dataset.data_root="$CDPATH/LEVIR-CD/cut_data"

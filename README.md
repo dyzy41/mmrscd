@@ -2,6 +2,8 @@ The Pytorch implementation for:
 “EfficientCD: A New Strategy For Change Detection Based With Bi-temporal Layers Exchanged[]([[2407.15999/] EfficientCD: A New Strategy For Change Detection Based With Bi-temporal Layers Exchanged (arxiv.org)](https://arxiv.org/abs/2407.15999)),
 [Sijun Dong](https://arxiv.org/search/cs?searchtype=author&query=Dong,+S), [Yuwei Zhu](https://arxiv.org/search/cs?searchtype=author&query=Zhu,+Y), [Geng Chen](https://arxiv.org/search/cs?searchtype=author&query=Chen,+G), [Xiaoliang Meng](https://arxiv.org/search/cs?searchtype=author&query=Meng,+X)::yum::yum:
 
+[EfficientCD]([EfficientCD: A New Strategy For Change Detection Based With Bi-temporal Layers Exchanged | IEEE Journals & Magazine | IEEE Xplore](https://ieeexplore.ieee.org/document/10608163)) has been accepted in [IEEE TGRS]([IEEE Xplore: IEEE Transactions on Geoscience and Remote Sensing](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36))
+
 
 
 ![image-20240724222528684](./docs/en/image-20240724222528684.png)
@@ -18,6 +20,17 @@ check the   [configs](configs)
 ```bash
 bash tools/train.sh
 ```
+
+## EfficientCD Pretrained Weights And Test Results
+
+LEVIR-CD:  链接：https://pan.baidu.com/s/1epOgO-cw1gDsLdKwnb_Etw 
+提取码：k7hu 
+
+(This experimental setting is different from the experimental setting description of the LEVIR-CD dataset in the original paper. It adopts the same experimental setting method as the CLCD dataset, using random cutting training and sliding window prediction.)
+
+WHUCD: 链接：https://pan.baidu.com/s/12_O_CdDemhidzNw1jJUwCA 
+提取码：u1md 
+
 
 
 ![image-20240724223103482](./docs/en/image-20240724223103482.png)
@@ -47,8 +60,3 @@ bash tools/train.sh
 ## Acknowledgments
 
  Our code is inspired and revised by [open-mmlab/mmsegmentation](https://github.com/open-mmlab/mmsegmentation),  [timm](https://github.com/huggingface/pytorch-image-models). Thanks  for their great work!!  
-
-
-
-## Reference  
-
